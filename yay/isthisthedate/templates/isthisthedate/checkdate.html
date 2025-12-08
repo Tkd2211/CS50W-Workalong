@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>
+        What's the date?
+    </title>
+    <link href="{% static 'isthisthedate/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div>
+    {% if if_date == 1 %}
+    <h1> Yes! </h1>
+    {% else %}
+    <h1> No! </h1>
+    {% endif %}
+    </div>
+</body>
