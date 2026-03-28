@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TASKS</title>
+        <link href="{% static 'tasks/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1 id="diff">Add tasks here!</h1>
+        <form action="{% url 'tasks:index' %}" method="post">
+            <input type="text" name="task">
+            <input type="submit">
+        </form>
+        <h1>Your Tasks</h1>
+        <ul>
+        {% for task in tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
